@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shairezz Krisha Deculawan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>SHAIREZZ KRISHA <span class="accent">DECULAWAN</span></h1>
+    </header>
+
+    <nav class="dashboard-controls">
+        <button class="dash-btn" onclick="showSection('home')">HOME</button>
+        <button class="dash-btn" onclick="showSection('features')">SYSTEM FEATURES</button>
+        <button class="dash-btn" onclick="showSection('dashboard')">DASHBOARD</button>
+        <button class="dash-btn" onclick="showSection('exercises')">EXERCISES</button>
+    </nav>
+
+    <main id="displayArea">
+        <section id="home" class="module-card">
+            <div class="module-label">Welcome</div>
+            <div class="terminal-view">
+                <h2>Turning Ideas Into Functional Systems</h2>
+                <p>This portfolio showcases technical laboratory exercises, front-end development skills, and system-based programming activities.</p>
+                <p>The platform demonstrates structured UI design, JavaScript logic handling, and interactive components.</p>
+    </div>
+</section>
+            </div>
+        </section>
+
+        <section id="features" class="module-card hidden">
+    <div class="module-label">System Features</div>
+    <div class="terminal-view">
+        <h2>Portfolio System Capabilities</h2>
+
+        <p>✔ Dynamic Section Switching (No Page Reload)</p>
+        <p>✔ Interactive Exercise Modules</p>
+        <p>✔ DOM Manipulation & Event Handling</p>
+        <p>✔ Activity Toggle Functionality</p>
+        <p>✔ Structured Laboratory Organization</p>
+        <p>✔ Responsive Layout Design</p>
+    </div>
+</section>
+
+        <section id="dashboard" class="module-card hidden">
+    <div class="module-label">System Dashboard</div>
+    <div class="terminal-view">
+        <h2>Engineering Portfolio Control Panel</h2>
+        <p>Status: 🟢 Online</p>
+        <p>Total Exercises: 3</p>
+        <p>Total Activities: 16</p>
+        <p>Technologies: HTML, CSS, JavaScript</p>
+        <br>
+        <button onclick="showSection('exercises')">Access Exercises</button>
+    </div>
+</section>
+
+        <section id="exercises" class="module-card hidden">
+            <div class="module-label">Laboratory Tasks</div>
+            <div class="activity-bar">
+                <button class="action-btn" onclick="toggleEx('ex2')">CLICK ME: EXERCISE 2</button>
+                <button class="action-btn" onclick="toggleEx('ex3')">CLICK ME: EXERCISE 3</button>
+                <button class="action-btn" onclick="toggleEx('ex4')">CLICK ME: EXERCISE 4</button>
+            </div>
+
+            <div id="ex2-container" class="hidden">
+                <div class="activity-bar tiny">
+                    <button onclick="ex2_act1()">1</button><button onclick="ex2_act2()">2</button>
+                    <button onclick="ex2_act3()">3</button><button onclick="ex2_act4()">4</button>
+                    <button onclick="ex2_act5()">5</button><button onclick="ex2_act6()">6</button>
+                    <button onclick="ex2_act7()">7</button>
+                </div>
+                <div id="content1" class="terminal-view"></div>
+            </div>
+
+            <div id="ex3-container" class="hidden">
+                <div class="activity-bar tiny">
+                    <button onclick="ex3_act1()">1</button><button onclick="ex3_act2()">2</button>
+                    <button onclick="ex3_act3()">3</button><button onclick="ex3_act4()">4</button>
+                    <button onclick="ex3_act5()">5</button><button onclick="ex3_act6()">6</button>
+                    <button onclick="ex3_act7()">7</button><button onclick="ex3_act8()">8</button>
+                </div>
+                <div id="content2" class="terminal-view"></div>
+            </div>
+
+            <div id="ex4-container" class="hidden">
+
+    <div class="activity-bar tiny">
+        <button onclick="ex4_act1()">1</button>
+    </div>
+
+    <div id="content3" class="terminal-view"></div>
+
+</div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
