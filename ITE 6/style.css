@@ -1,0 +1,189 @@
+:root {
+    --primary: #6366f1;        /* Indigo */
+    --primary-dark: #4f46e5;
+    --accent: #22d3ee;         /* Cyan */
+    --bg-light: #f8fafc;
+    --card-bg: #ffffff;
+    --text-dark: #1e293b;
+    --text-light: #f1f5f9;
+    --border: #e2e8f0;
+}
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+/* DARK MODE */
+body.dark-mode {
+    background: #0f172a;
+    color: var(--text-light);
+}
+
+/* HEADER */
+header {
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.accent {
+    color: var(--primary);
+}
+
+/* NAVIGATION */
+.dashboard-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.dash-btn {
+    padding: 12px 28px;
+    border-radius: 8px;
+    border: none;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.dash-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* CARD LAYOUT */
+.module-card {
+    max-width: 900px;
+    margin: auto;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+body.dark-mode .module-card {
+    background: #1e293b;
+}
+
+/* CARD HEADER */
+.module-label {
+    background: var(--primary);
+    color: white;
+    padding: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* TERMINAL VIEW */
+.terminal-view {
+    padding: 30px;
+    text-align: left;
+    min-height: 250px;
+    line-height: 1.6;
+}
+
+/* ACTIVITY BUTTON BAR */
+.activity-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    flex-wrap: wrap;
+    background: #f1f5f9;
+}
+
+body.dark-mode .activity-bar {
+    background: #0f172a;
+}
+
+/* SMALL NUMBER BUTTONS */
+.activity-bar.tiny button {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    border: 2px solid var(--primary);
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.activity-bar.tiny button:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* MAIN ACTION BUTTONS */
+.action-btn {
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.action-btn:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* INPUT FIELDS */
+input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+}
+
+/* LISTS */
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* HIDDEN */
+.hidden {
+    display: none !important;
+}
+#targetImg {
+    width: 250px;
+    height: auto;
+    transition: all 0.2s ease;
+    background-color: #fff;
+}
+
+#targetImg:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 12px 12px 0 var(--baby-blue) !important;
+}
+
+/* Dark mode version for the image border */
+body.dark-mode #targetImg {
+    border-color: var(--baby-blue);
+    box-shadow: 8px 8px 0 #000 !important;
+}
